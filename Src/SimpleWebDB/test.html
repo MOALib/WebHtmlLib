@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="SimpleWebDB.js"></script>
+    </head>
+    <body>
+        <p>See the devtool console</p>
+        <script>
+            var db = SimpleWebDB.load({as: "1", b: "2"});
+            var a = db.set("a");
+            var a2 = db.set("a2");
+            var a3 = db.set("a3");
+            db.set("a.out");
+            var ao = db.get("a.out");
+
+            a.set("1", "1");
+            a.set("key", "value");
+            a.set("random", Math.random());
+
+            a2.set("12.2", "12.2");
+            a2.set("key2", "value2");
+            a2.set("random2", Math.random());
+
+            a2.set("12.3", "12.3");
+            a2.set("key3", "value3");
+            a2.set("random3", Math.random());
+
+            ao.set("12.out", "12.out");
+            ao.set("key.out", "value.out");
+            ao.set("a.out", "coff");
+            ao.set("coff", "a.out");
+            ao.set("random.shit", Math.random());
+
+            // console.log(ao);
+            // console.log(ao.get("coff"));
+            // console.log(ao.dump());
+            // console.log(db.collectionDump());
+
+            var dumpdb = db.dump();
+            // console.log(dumpdb);
+
+
+            db.load({loaf: "load", load: "loaf", dumpeddb: dumpdb, obj: {}});
+
+            var twentyone = db.set("21");
+            twentyone.set("21", "twentyone");
+            twentyone.set("twentyone", "21");
+
+            // console.log(db.dump());
+        </script>
+    </body>
+</html>

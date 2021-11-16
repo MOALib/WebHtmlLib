@@ -1,0 +1,30 @@
+{
+  "name": "webhtmllib",
+  "version": "1.0.0",
+  "description": "Collection of javascript libraries for the web",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run",
+    "minify": "minify",
+    "transpile": "npx babel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MXPSQL-ALib/WebHtmlLib.git"
+  },
+  "keywords": [],
+  "author": "MXPSQL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MXPSQL-ALib/WebHtmlLib/issues"
+  },
+  "homepage": "https://github.com/MXPSQL-ALib/WebHtmlLib#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "minify": "^8.0.3"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

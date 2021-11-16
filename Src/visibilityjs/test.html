@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="WebVisibility.js"></script>
+    </head>
+    <body>
+        <p class="WebVisibilityJSBlinking" blinkrate="3s" id="test"> blink </p>
+        <p id="test1">not blinking</p>
+        <blink id="test2"><p>Blink elements blink me</p></blink>
+        <blink id="test3">I has 2 child <p>Me chils</p> <p>Me twin</p> <p>Brussel sprouts soup are cabbage soup</p> </blink>
+        <p id="test4" style='visibility: hidden; '>You can see me</p>
+        <p id="test5">You can't see me</p>
+        <script>
+            WebVisibilityJS.blinkToolkit.startBlinkElement();
+            WebVisibilityJS.visibilityToolkit.show(document.getElementById("test4"));
+            WebVisibilityJS.visibilityToolkit.hide(document.getElementById("test5"));
+        </script>
+    </body>
+</html>
